@@ -1,11 +1,7 @@
 hola es una prueba
-<<<<<<< Updated upstream
 
 -----
 Hola esto es una prueba parte 2 :D
-=======
-esto también es una prueba
->>>>>>> Stashed changes
 
 ---------
 
