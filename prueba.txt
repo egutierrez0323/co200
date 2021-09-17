@@ -12,5 +12,9 @@ esto también es una prueba
 Hola de nuevo esta es la parte 3 jajaj
 hecho con visual studio code :D
 
+<<<<<<< HEAD
 
 //20210916 :D
+=======
+Probando otras formas :). Actualización 2.o desde VS. :v 
+>>>>>>> 907353b912b5f4d9ed2ad7914869c0a6ce067847
