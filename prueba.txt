@@ -7,3 +7,7 @@ Hola esto es una prueba parte 2 :D
 
 Hola de nuevo esta es la parte 3 jajaj
 hecho con visual studio code :D
+
+
+//20210916 :D
+Probando otras formas :). Actualización 2.o desde VS. :v 
