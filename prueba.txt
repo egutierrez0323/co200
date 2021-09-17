@@ -11,3 +11,5 @@ esto también es una prueba
 
 Hola de nuevo esta es la parte 3 jajaj
 hecho con visual studio code :D
+
+Actualización 2.o desde VS. :v 
