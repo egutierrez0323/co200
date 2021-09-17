@@ -1,0 +1,13 @@
+hola es una prueba
+<<<<<<< Updated upstream
+
+-----
+Hola esto es una prueba parte 2 :D
+=======
+esto también es una prueba
+>>>>>>> Stashed changes
+
+---------
+
+Hola de nuevo esta es la parte 3 jajaj
+hecho con visual studio code :D
