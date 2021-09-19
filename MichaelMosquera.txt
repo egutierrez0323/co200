@@ -1,0 +1,12 @@
+Para el curso de Desarrollo de Software se llevará a cabo un proyecto donde permita 
+controlar las ventas físicas y virtuales de una empresa de manufactura y poder hacer un 
+seguimiento de la misma, todo esto con una aplicación software que será analizada, 
+diseñada y construida por el equipo “co200”
+
+Mi nombre es Michael Mosquera, integrante del equipo de trabajo “co200”, tengo 23 años, 
+estudiante de Ingeniería Civil en la Universidad de Antioquia, en el momento estoy en el 
+nivel 6 de la carrera. Soy oriundo de Tuluá, Valle del Cauca y resido en Medellín. 
+Apasionado por el deporte, practico futbol y juego con el equipo de la Universidad, disfruto 
+de escuchar música mientras desarrollo diferentes actividades. Tengo expectativas de 
+aprender sobre la programación, sus diferentes metodologías y maneras de abordar sus 
+requerimientos.
