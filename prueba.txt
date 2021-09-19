@@ -11,3 +11,6 @@ hecho con visual studio code :D
 
 //20210916 :D
 Probando otras formas :). Actualización 2.o desde VS. :v 
+
+-- Editado desde la consola Github
+
