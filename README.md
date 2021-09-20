@@ -12,13 +12,8 @@ Gestión de usuarios y roles<br></p>
 Integrantes:<br>
 <ul>
 <li>Ciro Angarita - Ingeniero de Sistemas - 42 años</li> 
-<<<<<<< HEAD
-<li>Paula Saavedra</li> 
-<li>Michael Mosquera - Estudiante de Ingenieria Civil - 23 años</li> 
-=======
 <li>Paula Saavedra - Licenciada en educación infantil - 26 años</li> 
-<li>Michael Mosquera</li> 
->>>>>>> fc9191f7fcba5b116f6f8bf3fd20b21d4bbfe8d1
+<li>Michael Mosquera Estudiante de Ingenieria Civil - 23 años</li> 
 <li>Mariana Gómez Betancourt - Administradora de empresas - 42 años</li> 
 <li>Emmanuel Gutierrez</li> 
 </ul>
