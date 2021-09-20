@@ -14,7 +14,7 @@ Integrantes:<br>
 <li>Ciro Angarita - Ingeniero de Sistemas - 42 años</li> 
 <li>Paula Saavedra</li> 
 <li>Michael Mosquera</li> 
-<li>Mariana Gómez Betancourt</li> 
+<li>Mariana Gómez Betancourt - Administradora de empresas - 42 años</li> 
 <li>Emmanuel Gutierrez</li> 
 </ul>
 </p>
