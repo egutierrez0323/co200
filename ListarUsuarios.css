@@ -1,0 +1,40 @@
+label{
+    margin-left: 3cm;
+    align-content: center;
+}
+
+p{
+    display: flex;
+    margin-left: 26cm;
+}
+
+.listado{
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px auto;
+    width: 100%;
+}
+
+table{
+    position: inherit;
+    background-color: white;
+    text-align:center;
+    border-collapse: collapse;
+    width: 83%;
+    margin: 0 auto;
+}
+
+th, td{
+    border: 0cm; 
+    padding: 5px;
+}
+
+thead{
+    color: white;
+    background-color: rgb(37, 119, 146);
+}
+
+tr:nth-child(even){
+    background-color: rgb(245, 243, 243);
+}
+
