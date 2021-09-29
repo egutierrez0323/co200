@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/ListarUsuarios.css">
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <title>Listado de Usuarios</title>
+</head>
+
+<body>
+
+    <header> <!--Header de navegación-->
+    </header>
+    
+    <main> <!--parte principal de la página-->
+        <section class="opciones">
+            <form>
+                <label>
+                    Buscar
+                    <input name="bucar" type="search" placeholder="Buscar">
+                </label>
+                <p>Mostrar
+                    <select> 
+                    <option value="1">5</option> 
+                    <option value="2">10</option> 
+                    <option value="3">15</option> 
+                    <option value="4">20</option> 
+                    </select>  
+                    entradas</p>
+            </form>        
+        </section>
+        <section class="listado">
+            <table>
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Nombre de Usuario</th>
+                    <th>Nombre Completo</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td>PaulaSaavedra95</td>
+                    <td>Paula Alejandra Saavedra</td>
+                    <td>paulaalejandra95@gmail.com</td>
+                    <td>3178486269</td>
+                    <td>Ventas</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Borrar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>Marianagb7</td>
+                    <td>Mariana Gómez Betancur</td>
+                    <td>marisgob777@hotmail.com</td>
+                    <td>3218972347</td>
+                    <td>Ventas</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Borrar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+
+                            </box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>embulu</td>
+                    <td>Michael Mosquera </td>
+                    <td>mosqueraruiz@gmail.com</td>
+                    <td>3178670312</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Borrar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>egutierrez0323</td>
+                    <td>Emmanuel Gutierrez</td>
+                    <td>gutierrezgarciaema@gmail.com</td>
+                    <td>3007601298</td>
+                    <td>Usuario</td>
+                    <td>Pendiente</td>
+                    <td>
+                        <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Borrar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                    </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td>ciroac3188</td>
+                    <td>Ciro Angarita Camelo</td>
+                    <td>ciro.angarita@gmail.com</td>
+                    <td>310972347</td>
+                    <td>Usuario</td>
+                    <td>No autorizado</td>
+                    <td>
+                        <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Borrar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>Angie345</td>
+                        <td>Angie Corredor Cely</td>
+                        <td>caroshalom707@gmail.com</td>
+                        <td>31709834578</td>
+                        <td>Usuario</td>
+                        <td>Pendiente</td>
+                        <td>
+                            <a href="#" title="Editar"> <!--Botones para editar y borrar-->
+                                <box-icon name='edit-alt' color="green">
+                                </box-icon>
+                            </a>
+                            <a href="#" title="Borrar" >
+                                <box-icon name='trash' flip='horizontal' color="red">
+                                </box-icon>
+                            </a>
+                        </td>
+                    </tr>
+            </table>
+
+        </section>
+            
+    </main>
+
+    <footer> <!--footer-->
+    </footer>
+
+</body>
+    
+</html>
+</body>
+</html>
