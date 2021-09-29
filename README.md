@@ -6,9 +6,6 @@
 - Michael Mosquera
 - Paula Alejandra Saavedra Castaño
 - Angie Carolina Corredor Cely
-=============================================
-
-=============================================
 # Descripción Proyecto
 
 <p>Esta applicación permite controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el correspondiente seguimiento.</p>
