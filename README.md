@@ -23,6 +23,6 @@ Contiene los siguientes módulos:<br>
 - Paula Saavedra - Licenciada en educación infantil - 26 años
 - Michael Mosquera Estudiante de Ingenieria Civil - 23 años 
 - Mariana Gómez Betancourt - Administradora de empresas - 42 años
-- Emmanuel Gutierrez
+- Emmanuel Gutierrez - Tecnólogo en Sistemas y PLSQL DEVELOPER 21 años
 - Angie Carolina Corredor Cely - Estudiante de Ingeniería de Software y Desarrolladora - 26 años
 </p>
