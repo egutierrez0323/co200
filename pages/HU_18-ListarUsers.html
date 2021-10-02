@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/styles_HU_018.css">
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!--Link Icons-->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/d4cd33a1a3.js" crossorigin="anonymous"></script>  
+    <title>Listado de Usuarios</title>
+</head>
+
+<body>
+    <header> 
+        <!--Header de navegación-->
+    </header>
+    
+    <main> <!--parte principal de la página-->
+       <section class="title">
+            <h1>Gestión de Usuarios</h1>
+        </section>
+        <section>
+            <div>
+                <ul>
+                    <li>
+                        <div class="search">
+                        <input placeholder="Buscar usuario"/>
+                        <i class="fas fa-search button searchIcon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+           
+        <section>
+            <table id="listado" class="table table-hover">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Action</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td><strong> 1 </strong></td>
+                    <td> PaulaSaavedra95 </td>
+                    <td> Paula Alejandra Saavedra </td>
+                    <td> 3178486269 </td>
+                    <td> paulaalejandra95@gmail.com </td>
+                    <td> Ventas </td>
+                    <td> Autorizado </td>
+                    <td>
+                        <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;"><!--Botones para editar y borrar-->
+                            <box-icon name='edit-alt' color="green"></box-icon>
+                        </a>
+                        <a href="#" title="Eliminar" >
+                            <box-icon name='trash' flip='horizontal' color="red"></box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>Marianagb7 </td>
+                    <td>Mariana Gómez Betancur</td>
+                    <td>3218972347</td>
+                    <td>marisgob777@hotmail.com</td>
+                    <td>Ventas</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;"> 
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Eliminar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+
+                            </box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>embulu</td>
+                    <td>Michael Mosquera </td>
+                    <td>3178670312</td>
+                    <td>mosqueraruiz@gmail.com</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;">
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Eliminar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>Egutierrez0323 </td>
+                    <td>Emmanuel Gutierrez</td>
+                    <td>3007601298</td>
+                    <td>gutierrezgarciaema@gmail.com</td>
+                    <td>Usuario</td>
+                    <td>Pendiente</td>
+                    <td>
+                        <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;"> 
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Eliminar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                    </tr>
+                <tr>
+                    <td><strong> 5 </strong></td>
+                    <td> ciroac3188 </td>
+                    <td> Ciro Angarita Camelo </td>
+                    <td> 310972347 </td>
+                    <td> ciro.angarita@gmail.com </td>
+                    <td> Usuario </td>
+                    <td> No autorizado </td>
+                    <td>
+                        <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;">
+                            <box-icon name='edit-alt' color="green">
+                            </box-icon>
+                        </a>
+                        <a href="#" title="Eliminar" >
+                            <box-icon name='trash' flip='horizontal' color="red">
+                            </box-icon>
+                        </a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>caroshalom</td>
+                        <td>Angie Corredor Cely</td>
+                        <td>31709834578</td>
+                        <td>caroshalom707@gmail.com</td>
+                        <td>Usuario</td>
+                        <td>Pendiente</td>
+                        <td>
+                            <a href="UsersEdit.html" target="_blank" onclick="window.open(this.href, this.target, 'width=570,height=570,position=center'); return false;"> 
+                                <box-icon name='edit-alt' color="green">
+                                </box-icon>
+                            </a>
+                            <a href="#" title="Eliminar" >
+                                <box-icon name='trash' flip='horizontal' color="red">
+                                </box-icon>
+                            </a>
+                        </td>
+                    </tr>
+            </table>
+			
+			<nav aria-label="Page navigation">
+            <ul class="pagination justify-content-end">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+        </nav>
+			
+    </main>
+	
+
+</body>
+    
+</html>
+</body>
+</html>
