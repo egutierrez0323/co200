@@ -1,5 +1,13 @@
-.subtitle{
-    margin-left:  26.5cm;
+.title{
+    border-top: gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px gray;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .search{
@@ -36,7 +44,3 @@
 .searchIcon:hover{
     color: rgb(37, 119, 146);
 }
-
-
-
-
