@@ -2,46 +2,33 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-h1{
+h{
     text-align: center;
     color: rgb(0, 7, 0);
     font-size: 40px;
 }
 .container{
-    width: 85%;
-    padding: 5px;
-    text-align: center;
-    margin-bottom: 50px;
-    
-    
-}
-.form{
-    background: #ffffff;
-    margin-top: 150px;
-    padding: 3px;
     width: 500px;
-    border: 1.5px solid;
-    border-radius: 15px;  
+    padding: 50px;
+    height: auto;
+    text-align: center;
+    margin-top: 300px;
+    border: groove;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color:none;
 }
+
+div{
+    margin: 0 auto;
+}
+
+
 input{
     font-size: 20px;
     width: 82%;
     padding: 10px;
-    border: none;
-    
-}
-.input-u{
-    margin-bottom:5px;
-    margin-top: 10px;
-    border: 1px rgb(51, 49, 49) solid;
-    border-radius: 10px;
-    
-    
-    
-}
-label{
-    font-size: 28px;
-    color: black;
+    border: none;  
 }
 
 i{
@@ -52,28 +39,12 @@ i{
 }
 
 
-.btn{
-    border: none;
-    width: 60%;
-    padding: 15px;
-    color: black;
-    background: rgb(103, 182, 103);
-    font-size: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.btn:hover{
-    background: rgb(79, 218, 79);
-}
-@media(min-width:750px){
-    .form{
+ @media(min-width:750px){
+    .container{
         margin: auto;
-        width: 450px;
-        margin-top: 150px;
-        
-    }
-    .input-u{
-        
-    }
-}
+        margin-top: 300px;
+    
+    }      
+} 
+
 
