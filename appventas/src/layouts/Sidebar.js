@@ -149,7 +149,7 @@ const Profile = styled.div`
   justify-content: center;
   margin-left: ${(props) => (props.clicked ? "9rem" : "0")};
 
-  background-color: var(--black);
+  background-color: var(--blue);
   color: var(--white);
 
   transition: all 0.3s ease;
