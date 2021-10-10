@@ -13,8 +13,8 @@
             crossorigin="anonymous"></script>
     </head>
 <body>
+    <form>
     <div class="container-md">
-        <form>
             <div class="row mb-3">
                 <label for="ventaId" class="col-sm-2 col-form-label">Id Venta:</label>
                 <div class="col-sm-2">
@@ -63,9 +63,13 @@
                     <input type="number" id="valorTotal" class="form-control">
                 </div>
             </div>
-        </form>
     </div>
     <!-- 1/10/2021 | ciroac318 | detalle venta | Inicio -->
+    <datalist id="productos">
+        <option id="1" value="Gillete">
+        <option id="2" value="Panela">
+        <option id="3" value="Limón">
+      </datalist>
     <div class="container-fluid">
         <table class="table table-striped">
             <thead>
@@ -80,7 +84,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Gillete</td>
+                    <td><input list="productos" class="form-control"></td>
                     <td>10</td>
                     <td>$5,000</td>
                     <td>$50,000</td>
@@ -96,5 +100,6 @@
         </table>
     </div>
     <!-- 1/10/2021 | ciroac318 | detalle venta | Fin -->
+</form>
 </body></body>
 </html>
