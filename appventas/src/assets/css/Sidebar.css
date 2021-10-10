@@ -1,0 +1,19 @@
+:root{
+    --blue:#113661;
+    --grey: #a4b2bc;
+    --white: #fff;
+    --background: #e5e5e7;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Roboto';
+}

@@ -2,27 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/stylesEdit.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles_HU_019.css">
+    <link rel="shortcut icon" href="https://www.n8agency.co.uk/images/2018/06/14/web-947271_19222.jpg" type="image/x-icon"/>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!--Link bootstrap--> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>Editar Usuarios</title>
     
 </head>
 <body>
-    
-    <div class="p-3 mb-2 bg-light text-dark"> <!--title-->
-        <div class="container">
-            <div class="form-group row"></div>
-                <div class="row">
-                    <div class="col">
-                        <h3>Detalles de Usuario</h3>
-                        <p class="text-muted">
-                            <h6>Administrador</h6>
-                        </p>
-                    </div>
-                    <div class="col" align="end">
-                        <img src="media/pexels-christina-morillo-1181690.jpg" class="rounded-circle" alt="foto perfil" width="102" height="102" >
-                    </div>
-                </div>
+    <div class="alert">
+        <span class="msd">Success: Usuario actualizado con éxito</span>
+        <div class="close-btn">
+            <span class="fas fa-times"></span>
+        </div>
+    </div>
+    <!--subtitle-->
+    <div class="container">
+        <div class="form-group row"></div>
+        <div class="row">
+            <div class="col">
+                <h3>Detalles de Usuario</h3>
+                <p class="text-muted">
+                    <h6>Administrador</h6>
+                </p>
+            </div>
+            <div class="col" align="end">
+                    <img src="https://cdn.pixabay.com/photo/2016/10/06/03/30/man-1718099_1280.jpg" class="rounded-circle" alt="foto perfil" width="110" height="110" >
             </div>
         </div>
     </div>
@@ -30,6 +40,7 @@
     <div class="container">
         <form action="" class="form-horizontal"> 
             <div class="form-group row">
+                <br>
                 <label class="col-sm-2 col-form-label" class="col-sm-2 col-form-label" for="ID">
                     Id 
                 </label>
@@ -99,16 +110,26 @@
                 </select>  
             </div>  
             </div>
-            
-            <center>
-                <button class="btn btn-prymary" type="submit" > 
-                    Guardar Cambios 
-                </button>
-            </center>
-            
+                    
         </form>
     </div>
 
+    <button class="btn btn-outline-success">Guardar Datos</button>
+    <script>
+        $('button').click(function(){
+          $('.alert').addClass("show");
+          $('.alert').removeClass("hide");
+          $('.alert').addClass("showAlert");
+          setTimeout(function(){
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+          },3000);
+        });
+        $('.close-btn').click(function(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        });
+     </script>
 
 </body>
 </html>
