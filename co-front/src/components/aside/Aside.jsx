@@ -40,10 +40,10 @@ function Aside() {
             </Link>
           </li>
           <li>
-            <a href="./notifications.html">
+            <Link to="./usuarios">
               <i className="fas fa-user-cog"></i>
               <p>Gestion Usuarios</p>
-            </a>
+            </Link>
           </li>
           <li>
             <a href="./user.html">

@@ -22,37 +22,36 @@ function Productos() {
                     <Card className="card-plain">
                       <CardHeader>
                         <CardTitle tag="h6">Fomulario de productos</CardTitle>
-                        <div className="botones">
-                          <div className="row">
-                                <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
-                                  <button
-                                    title="Listar"
-                                    type="button"
-                                    className="col btn btn-outline-primary wboton"
-                                  >
-                                    Listar
-                                  </button>
-                                </div>
-                                <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
-                                  <button
-                                    title="Limpiar"
-                                    type="button"
-                                    className="col btn btn-outline-secondary wboton"
-                                  >
-                                    Limpiar
-                                  </button>
-                                </div>
-                                <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
-                                  <button
-                                    title="Guardar"
-                                    type="button"
-                                    className="btn btn-outline-success "
-                                  >
-                                    Guardar
-                                  </button>
-                                </div>
-                          </div>
-                        </div>
+                          <div className="botones">
+                            <div className="row">
+                                  <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <button
+                                      title="Listar"
+                                      type="button"
+                                      className="col btn btn-outline-primary wboton">
+                                      Listar
+                                      </button>
+                                  </div>
+                                  <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <button
+                                      title="Limpiar"
+                                      type="button"
+                                      className="col btn btn-outline-secondary wboton"
+                                    >
+                                      Limpiar
+                                    </button>
+                                  </div>
+                                  <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
+                                    <button
+                                      title="Guardar"
+                                      type="button"
+                                      className="btn btn-outline-success "
+                                    >
+                                      Guardar
+                                    </button>
+                                  </div>
+                              </div>
+                          </div>   
                       </CardHeader>
                       <CardBody>
                         <div className="row col-12">
