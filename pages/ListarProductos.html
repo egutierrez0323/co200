@@ -21,10 +21,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap" rel="stylesheet">
-    <title>Listar productos</title>
+    <title>Busqueda de productos</title>
 </head>
 <body>
     <h4 style="text-align: center;">Listar información productos</h4><br>
+    <!-- HU_015 - ciroac3188 - Busqueda con criterios - Inicio -->
+    <div class="container-md">
+        <form>
+            <div class="row mb-3">
+                <label for="id" class="col-sm-2 col-form-label">Id Producto:</label>
+                <div class="col-sm-2">
+                    <input type="text" id="id" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="descripcion" class="col-sm-2 col-form-label">Descripción:</label>
+                <div class="col-sm-6">
+                    <input type="text" id="descripcion" class="form-control">
+                </div>
+                <button title="Buscar"  type="button" class="col btn btn-outline-primary">Buscar</button>
+            </div>
+        </form>
+    </div>
+    <!-- HU_015 - ciroac3188 - Busqueda con criterios - Fin -->
+
     <table class="table table-striped table-hover">
     <!-- <table id="example" class="display" style="width:100%"> -->
         <thead>
@@ -39,39 +59,30 @@
         </thead>
         <tbody>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td>1</td>
+                <td>Panela</td>
+                <td>Alimentos</td>
+                <td>Panela cuadrada</td>
+                <td>$2,000</td>
+                <td>20,800</td>
             </tr>
             <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
+                <td>2</td>
+                <td>Limon</td>
+                <td>Alimentos</td>
+                <td>Limon Taiti</td>
+                <td>$800</td>
+                <td>170,750</td>
             </tr>
             <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
+                <td>3</td>
+                <td>Shampoo</td>
+                <td>Aseo y belleza</td>
+                <td>Dove general</td>
+                <td>$15,000</td>
+                <td>86,000</td>
             </tr>
         </tfoot>
     </table>
-    
 </body>
 </html>
