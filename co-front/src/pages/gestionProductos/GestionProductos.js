@@ -23,6 +23,7 @@ function Productos() {
                     <Card className="card-plain">
                       <CardHeader>
                         <CardTitle tag="h6">Fomulario de productos</CardTitle>
+<<<<<<< HEAD
                         <div className="botones">
                           <div className="row">
                             <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
@@ -33,6 +34,65 @@ function Productos() {
                               >
                                 Listar
                               </button>
+=======
+                          <div className="botones">
+                            <div className="row">
+                                  <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <button
+                                      title="Listar"
+                                      type="button"
+                                      className="col btn btn-outline-primary wboton">
+                                      Listar
+                                      </button>
+                                  </div>
+                                  <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <button
+                                      title="Limpiar"
+                                      type="button"
+                                      className="col btn btn-outline-secondary wboton"
+                                    >
+                                      Limpiar
+                                    </button>
+                                  </div>
+                                  <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
+                                    <button
+                                      title="Guardar"
+                                      type="button"
+                                      className="btn btn-outline-success "
+                                    >
+                                      Guardar
+                                    </button>
+                                  </div>
+                              </div>
+                          </div>   
+                      </CardHeader>
+                      <CardBody>
+                        <div className="row col-12">
+                          <form action="" method="post">
+                            <div className="row">
+                              <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <label for="N_Producto">Nombre Producto:</label>
+                                <input
+                                  type="text"
+                                  required="true"
+                                  className="form-control"
+                                  id="N_Producto"
+                                  placeholder="Ingrese el nombre"
+                                  maxlength="20"
+                                />
+                              </div>
+                              <div className="col-sm-12 col-md-6 col-lg-9 col-xl-9 mb-3">
+                                <label for="descripcion">Descripcion:</label>
+                                <input
+                                  type="text"
+                                  required="true"
+                                  className="form-control"
+                                  id="descripcion"
+                                  placeholder="Ingrese la Descripcion"
+                                  maxlength="200"
+                                />
+                              </div>
+>>>>>>> 80e20b2edf1705d093a02f94d1b3acda91c19d07
                             </div>
                             <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
                               <button
