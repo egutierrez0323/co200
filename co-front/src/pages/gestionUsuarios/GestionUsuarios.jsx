@@ -1,6 +1,6 @@
-
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table,Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+
 
 function GestionUsuarios(){
 
@@ -55,7 +55,6 @@ const handleChange=e=>{
     setModalEliminar(false);
   }
 
-
     return (
         <>
             <div className="content">
@@ -74,11 +73,9 @@ const handleChange=e=>{
                                         <Card className="card-plain">
                                             <CardHeader>
                                                 <CardTitle >
-                                                    <form class="form-inline">
-                                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
-                                                        </button>
-                                                    </form>
+                                                    <div>
+                                                        
+                                                    </div>
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardBody>

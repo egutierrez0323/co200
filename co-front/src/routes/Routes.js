@@ -1,16 +1,18 @@
 import { Switch, Route } from "react-router-dom";
 import { Redirect } from "react-router";
-import Home from "../pages/home/Home.js";
-import Ventas from "../pages/gestionVentas/Gestion_Ventas.js";
-import Productos from "../pages/gestionProductos/GestionProductos.js";
-import Usuarios from "../pages/gestionUsuarios/GestionUsuarios.jsx";
+import Login from "../components/Login/Login";
+import Home from "../pages/home/Home";
+import Ventas from "../pages/gestionVentas/Gestion_Ventas";
+import Productos from "../pages/gestionProductos/GestionProductos";
+import Usuarios from "../pages/gestionUsuarios/GestionUsuarios";
 
 function Routes() {
   return (
     <Switch>
       <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
+        <Redirect to="" />
+          <Login/>
+        </Route>
       <Route path="/home">
         <Home />
       </Route>
@@ -23,6 +25,7 @@ function Routes() {
       <Route path="/usuarios">
         <Usuarios />
       </Route>
+      
     </Switch>
   );
 }

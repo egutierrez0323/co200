@@ -5,18 +5,15 @@ function Aside() {
     <div className="sidebar" data-color="black" data-active-color="react">
       <div className="logo">
         <a
-          href="https://www.creative-tim.com"
+          href="/"
           className="simple-text logo-mini"
         >
           <div className="logo-image-small">
             <i className="fab fa-react fa-2x"></i>
           </div>
         </a>
-        <a
-          href="https://www.creative-tim.com"
-          className="simple-text logo-normal"
-        >
-          AppVentas co200
+        <a href="" className="simple-text logo-normal">
+          App Ventas co200
         </a>
       </div>
       <div className="sidebar-wrapper">
@@ -52,7 +49,7 @@ function Aside() {
             </a>
           </li>
           <li>
-            <a href="./tables.html"></a>
+            
           </li>
         </ul>
       </div>
