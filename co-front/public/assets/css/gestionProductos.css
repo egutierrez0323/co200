@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .botones {
   display: flex;
   justify-content: right;
@@ -11,3 +12,18 @@
 .wboton {
   width: 120px !important;
 } */ */
+=======
+/* .botones {
+  display: flex;
+  justify-content: right;
+  margin-left: 600;
+  /* Flex y justifi content right */
+  /* position:relative;
+    align-items: right;
+    align-content: space-between;*/
+/* }
+
+.wboton {
+  width: 120px !important;
+} */ */
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4

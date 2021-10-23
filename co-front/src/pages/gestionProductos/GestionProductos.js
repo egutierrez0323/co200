@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 import React from "react";
 // react plugin for creating notifications over the dashboard
 // reactstrap components
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import TableProd from "../../components/Tablas/TablaProductos.jsx";
 
 function Productos() {
   return (
@@ -24,132 +26,38 @@ function Productos() {
                         <CardTitle tag="h6">Fomulario de productos</CardTitle>
                         <div className="botones">
                           <div className="row">
-                                <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
-                                  <button
-                                    title="Listar"
-                                    type="button"
-                                    className="col btn btn-outline-primary wboton"
-                                  >
-                                    Listar
-                                  </button>
-                                </div>
-                                <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
-                                  <button
-                                    title="Limpiar"
-                                    type="button"
-                                    className="col btn btn-outline-secondary wboton"
-                                  >
-                                    Limpiar
-                                  </button>
-                                </div>
-                                <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
-                                  <button
-                                    title="Guardar"
-                                    type="button"
-                                    className="btn btn-outline-success "
-                                  >
-                                    Guardar
-                                  </button>
-                                </div>
+                            <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                              <button
+                                title="Listar"
+                                type="button"
+                                className="col btn btn-outline-primary wboton"
+                              >
+                                Listar
+                              </button>
+                            </div>
+                            <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                              <button
+                                title="Limpiar"
+                                type="button"
+                                className="col btn btn-outline-secondary wboton"
+                              >
+                                Limpiar
+                              </button>
+                            </div>
+                            <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
+                              <button
+                                title="Guardar"
+                                type="button"
+                                className="btn btn-outline-success "
+                              >
+                                Guardar
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </CardHeader>
                       <CardBody>
-                        <div className="row col-12">
-                          <form action="" method="post">
-                            <div className="row">
-                              <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                                <label for="N_Producto">Nombre Producto:</label>
-                                <input
-                                  type="text"
-                                  required="true"
-                                  className="form-control"
-                                  id="N_Producto"
-                                  placeholder="Ingrese el nombre"
-                                  maxlength="20"
-                                />
-                              </div>
-                              <div className="col-sm-12 col-md-6 col-lg-9 col-xl-9 mb-3">
-                                <label for="descripcion">Descripcion:</label>
-                                <input
-                                  type="text"
-                                  required="true"
-                                  className="form-control"
-                                  id="descripcion"
-                                  placeholder="Ingrese la Descripcion"
-                                  maxlength="200"
-                                />
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3">
-                                <label for="Cat_Producto">
-                                  Categoria Producto:
-                                </label>
-                                <select
-                                  className="form-select"
-                                  id="Cat_Producto"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>
-                                    Seleccione la Cateroria
-                                  </option>
-                                  <option value="1">Hogar</option>
-                                  <option value="2">Tecnologia</option>
-                                  <option value="3">Jugueteria</option>
-                                  <option value="4">Herramientas</option>
-                                  <option value="5">Consumibles</option>
-                                  <option value="6">Vehiculos</option>
-                                </select>
-                              </div>
-
-                              <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3">
-                                <label for="Existencias">
-                                  Cantidad de Existencias:
-                                </label>
-                                <input
-                                  type="number"
-                                  required="true"
-                                  className="form-control"
-                                  id="Existencias"
-                                  placeholder="Cantidad Existencias"
-                                  maxlength="10"
-                                  min="0"
-                                  max="50"
-                                />
-                              </div>
-                              <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3">
-                                <label for="Val_Unitario">
-                                  Valor Unitario:
-                                </label>
-                                <div className="input-group mb-3">
-                                  <span className="input-group-text">$</span>
-                                  <input
-                                    type="number"
-                                    min="0"
-                                    max="1000000"
-                                    required="true"
-                                    className="form-control"
-                                    id="Val_Unitario"
-                                  />
-                                  <span className="input-group-text">.00</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-9 mb-3">
-                                <label for="Description"># Detalle:</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  id="Description"
-                                  placeholder="Ingrese una descripcion para la venta"
-                                  maxlength="100"
-                                />
-                              </div>
-                            </div>
-                          </form>
-                        </div>
+                        <TableProd />
                       </CardBody>
                     </Card>
                   </Col>
@@ -290,3 +198,79 @@ function Productos() {
 }
 
 export default Productos;
+=======
+import React from "react";
+// react plugin for creating notifications over the dashboard
+// reactstrap components
+import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import TableProd from "../../components/Tablas/TablaProductos.jsx";
+
+function Productos() {
+  return (
+    <>
+      <div className="content">
+        <Row>
+          <Col md="12">
+            <Card>
+              <CardHeader>
+                <CardTitle tag="h5">Gestion de Productos</CardTitle>
+                <p className="card-category">
+                  Aqui podras crear tus productos{" "}
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                  <Col md="12">
+                    <Card className="card-plain">
+                      <CardHeader>
+                        <CardTitle tag="h6">Fomulario de productos</CardTitle>
+                        <div className="botones">
+                          <div className="row">
+                            <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                              <button
+                                title="Listar"
+                                type="button"
+                                className="col btn btn-outline-primary wboton"
+                              >
+                                Listar
+                              </button>
+                            </div>
+                            <div className="col-sm-12 col-md-2 col-lg-2 col-xl-2 mb-3">
+                              <button
+                                title="Limpiar"
+                                type="button"
+                                className="col btn btn-outline-secondary wboton"
+                              >
+                                Limpiar
+                              </button>
+                            </div>
+                            <div className="col-sm-12 col-md-2 col-lg-3 col-xl-2 mb-3">
+                              <button
+                                title="Guardar"
+                                type="button"
+                                className="btn btn-outline-success "
+                              >
+                                Guardar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardBody>
+                        <TableProd />
+                      </CardBody>
+                    </Card>
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+
+      </div>
+    </>
+  );
+}
+
+export default Productos;
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
