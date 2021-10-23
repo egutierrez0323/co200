@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 import React, {useState} from 'react'
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table,Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 
 function GestionUsuarios(){
+=======
+import React, {useState} from 'react';
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table,Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import DefaultTable from '../../components/defaultTable/defaultable';
+
+
+const GestionUsuarios = () => {
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
 
 const dataUsuarios = [
     {id: 1, nombre: "Paula Alejandra Saavedra", telefono: "3178486269", email: "paulaalejandra95@gmail.com", rol: "Ventas", estado: "Autorizado"},
@@ -55,7 +64,10 @@ const handleChange=e=>{
     setModalEliminar(false);
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
     return (
         <>
             <div className="content">
@@ -74,6 +86,7 @@ const handleChange=e=>{
                                         <Card className="card-plain">
                                             <CardHeader>
                                                 <CardTitle >
+<<<<<<< HEAD
                                                     <form class="form-inline">
                                                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                                                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
@@ -116,6 +129,15 @@ const handleChange=e=>{
                                                      }
                                                 </tbody>
                                             </Table>
+=======
+                                                    <div>
+                                                        
+                                                    </div>
+                                                </CardTitle>
+                                            </CardHeader>
+                                            <CardBody>
+                                                <DefaultTable/> {/* TABLA DE GESTION DE USUARIOS*/}
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
                                             </CardBody>
                                         </Card>
                                     </Col>
@@ -124,6 +146,7 @@ const handleChange=e=>{
                         </Card>
                     </Col>
                 </Row>
+<<<<<<< HEAD
                 <Modal isOpen={modalEditar}>
                     <ModalHeader>
                     <div>
@@ -206,6 +229,8 @@ const handleChange=e=>{
                     </ModalFooter>
                 </Modal>
 
+=======
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
 
                 <Modal isOpen={modalEliminar}>
                     <ModalBody>

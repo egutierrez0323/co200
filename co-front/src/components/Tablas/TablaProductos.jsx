@@ -95,7 +95,11 @@ function TableProd() {
 
   const editar=()=>{
       var dataNueva=data;
+<<<<<<< HEAD
       dataNueva.map(prod=>{
+=======
+      dataNueva.map((prod) => {
+>>>>>>> 36f64b97bf7904ce911bd2a831973676187ce7c4
           if(prod.id===prodSeleccionado.id){
               prod.Producto=prodSeleccionado.Producto;
               prod.Categoria=prodSeleccionado.Categoria;
