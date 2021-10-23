@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -20,8 +19,6 @@
 .env.test.local
 .env.production.local
 
-=======
->>>>>>> 36f6ec8714296ea83f555139441de2b63aec0095
 # Logs
 logs
 *.log
