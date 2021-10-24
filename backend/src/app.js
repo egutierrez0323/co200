@@ -10,9 +10,8 @@ config(app);
 
 // ruta
 router(app);
-/*const {productRoutes} = require('./routes');
-app.use('/api/v1/product', productRoutes);
-*/
+const {saleRoutes} = require('./routes');
+app.use('/api/v1/sale', saleRoutes);
 //ciroac3188 replace bodyParser
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());

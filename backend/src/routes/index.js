@@ -1,7 +1,7 @@
-const productRoutes = require('./product.routes');
-const userRoutes = require('./user.routes');
+const saleRoutes = require('./product.routes');
+const productRoutes = require('./sale.routes');
 
 module.exports = Object.freeze({
-    productRoutes,
-    userRoutes
+    saleRoutes,
+    productRoutes
 });

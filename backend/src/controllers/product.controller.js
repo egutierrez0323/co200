@@ -11,7 +11,7 @@ addProduct = (req, res) => {
     const product_new = new productModel(req.body);
     product_new.save((error, product) => {
         if (error) return res.status(500).json({ error: true, mensaje: error })
-        res.json({ mensaje: req.body.description + " agregado satisfactoriamente" })
+        res.json({ mensaje: req.body.descripcion + " agregado satisfactoriamente" })
     })
 }
 
@@ -19,7 +19,7 @@ deleteProduct = async (req, res) => {
     const product_delete = await productModel.findByIdAndDelete({ _id: req.params.id })
 
     try {
-        if (product_delete) return res.json({ mensaje: product_delete.description + " eliminado correctamente" });
+        if (product_delete) return res.json({ mensaje: product_delete.descripcion + " eliminado correctamente" });
         else return res.status(500).json({ error: true, mensaje: "Falla al eliminar" });
     } catch (error) {
         return res.staus(500).json({ error: true, mensaje: error })
@@ -41,4 +41,4 @@ module.exports = Object.freeze({
     addProduct,
     deleteProduct,
     updateProduct
-})
+});
