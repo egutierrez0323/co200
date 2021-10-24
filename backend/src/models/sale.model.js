@@ -40,4 +40,4 @@ const saleSchema = Schema({
     }]
 });
 
-const Sale = mongoose.model('sale', saleSchema);
+module.exports = mongoose.model('sale', saleSchema);
