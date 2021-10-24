@@ -1,4 +1,4 @@
-import cors from 'cors';
+const cors = require('cors');
 require('dotenv').config();
 // ciroac3188 deprecated -> import bodyParser from 'body-parser';
 // ciroac3188 import morgan from 'morgan';

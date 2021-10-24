@@ -1,9 +1,9 @@
 const { salesPersonModel } = require('../models');
 
 getAllSalesPersons = (req, res) => {
-    salesPersonModel.find().exec((error, sales) => {
+    salesPersonModel.find().exec((error, salesPersons) => {
         if (error) return res.status(500).json({ error: true, mensaje: error });
-        res.json({ sales });
+        res.json({ salesPersons });
     })
 }
 
