@@ -16,4 +16,4 @@ const salesPersonSchema = Schema({
     fechaIngreso: Date
 });
 
-module.exports = mongoose.model('salesPerson', salesPersonSchema);
+module.exports = mongoose.model('salesPersons', salesPersonSchema);

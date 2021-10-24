@@ -19,7 +19,7 @@ deleteSale = async (req, res) => {
     const sale_delete = await saleModel.findByIdAndDelete({ _id: req.params.id })
 
     try {
-        if (sale_delete) return res.json({ mensaje: sale_delete.descripcion + " eliminado correctamente" });
+        if (sale_delete) return res.json({ mensaje: sale_delete.idVenta + " eliminado correctamente" });
         else return res.status(500).json({ error: true, mensaje: "Falla al eliminar" });
     } catch (error) {
         return res.staus(500).json({ error: true, mensaje: error })
