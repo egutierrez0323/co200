@@ -16,4 +16,4 @@ const salesPersonSchema = Schema({
     fechaIngreso: Date
 });
 
-const User = mongoose.model('salesPerson', salesPersonSchema);
+const SalesPerson = mongoose.model('salesPerson', salesPersonSchema);
