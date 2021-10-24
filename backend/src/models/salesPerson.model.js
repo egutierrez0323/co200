@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-const Schema = mongoose.schema()
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const salesPersonSchema = Schema({
     id: {
@@ -16,4 +16,4 @@ const salesPersonSchema = Schema({
     fechaIngreso: Date
 });
 
-const SalesPerson = mongoose.model('salesPerson', salesPersonSchema);
+module.exports = mongoose.model('salesPersons', salesPersonSchema);

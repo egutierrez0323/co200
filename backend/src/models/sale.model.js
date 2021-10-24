@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const saleSchema = Schema({
-    id: {
+    idVenta: {
         type: Number,
         unique: true,
         required: true
@@ -40,4 +40,4 @@ const saleSchema = Schema({
     }]
 });
 
-const Sale = mongoose.model('sale', saleSchema);
+module.exports = mongoose.model('sales', saleSchema);

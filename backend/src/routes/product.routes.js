@@ -1,8 +1,10 @@
-import express from 'express';
-const router = express.Router();
-import Product from '../controllers/product.controller';
+const router = require('express').Router();
+const {productController} = require('../controllers');
+const {productMiddleware} = require('../middlewares');
 
+router.post('/add', productMiddleware.verifyTypes, productMiddleware.verifyIdProducto, productController.addProduct);
+router.get('/list', productController.getAllProducts);
+router.put('/update', productMiddleware.verifyTypes, productController.updateProduct);
+router.delete('/delete/:id', productController.deleteProduct);
 
-router.get('/products', productController.getProdutcs);
-
-export default router;
+module.exports = router;
