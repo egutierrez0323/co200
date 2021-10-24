@@ -2,7 +2,8 @@ import mongoose from 'mongoose'
 const Schema = mongoose.schema()
 
 const userSchema = Schema({
-    nombreCompleto: String,
+    nombre: String,
+    telefono: String,
     rol: String,
     email: {
         type: String,
@@ -10,9 +11,7 @@ const userSchema = Schema({
         unique: true
     },
     password: String,
-    activo: {
-        type: Boolean,
-        default: false
+    estado: String
     }
 });
 
