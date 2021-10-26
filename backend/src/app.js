@@ -2,8 +2,10 @@ const express = require('express');
 //ciroac3188 const config  = require('./config');
 //ciroac3188 const router = require('./router');
 //ciroac3188 const database = require('./database');
+const bodyParser = require('body-parser');
 const app = express();
 
+app.use(bodyParser.json());
 
 // Configure
 const cors = require('cors');
