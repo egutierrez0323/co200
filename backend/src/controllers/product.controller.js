@@ -10,8 +10,8 @@ getAllProducts = (req, res) => {
 addProduct = (req, res) => {
     const product_new = new productModel(req.body);
     product_new.save((error, product) => {
-        if (error) return res.status(500).json({ error: true, mensaje: error })
-        res.json({ mensaje: req.body.descripcion + " agregado satisfactoriamente" })
+        if (error) return res.status(500).json({ error: true, mensaje: error });
+        res.json({ mensaje: req.body.producto + " agregado satisfactoriamente" });
     })
 }
 
