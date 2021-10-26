@@ -1,13 +1,14 @@
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
+const cors = require('cors');
+require('dotenv').config();
+// ciroac3188 deprecated -> import bodyParser from 'body-parser';
+// ciroac3188 import morgan from 'morgan';
 
 export default (app) => {
   app.disable('x-powered-by');  
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
+  /* ciroac3188 deprecated -> app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }));*/
   app.use(cors());
-  app.use(morgan("dev"));
+  // ciroac3188 app.use(morgan("dev"));
 
 }
