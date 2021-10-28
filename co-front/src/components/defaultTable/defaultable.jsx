@@ -104,7 +104,7 @@ const DefaultTable = ({data,dataMenus,option,onDeletebuttom}) => {
                 <ModalupdateUser show={show} handleShow={handleShow} handleClose={handleClose} />
             </div>
         )
-    }else if (option === 2 ){ // retornar opciones de mapeo para la tabla de gestion de Productos
+    }else if (option === 3 ){ // retornar opciones de mapeo para la tabla de gestion de Ventas
     return (
         <div className="DefaultTable">
             <Table striped bordered hover>              
@@ -125,9 +125,12 @@ const DefaultTable = ({data,dataMenus,option,onDeletebuttom}) => {
                         data.map( (datos) => (
                             <tr key={datos._id}>
                                 <td>{datos.id}</td>
-                                <td>{datos.descripcion}</td>
-                                <td>{datos.valoru}</td>
-                                <td>{datos.estado}</td>                  
+                                <td>{datos.a}</td>
+                                <td>{datos.b}</td>
+                                <td>{datos.c}</td>
+                                <td>{datos.d}</td>
+                                <td>{datos.e}</td>
+                                <td>{datos.f}</td>              
                                 <td>
                                     <DefaultButtom typebuttom={1} text={"ACTUALIZAR"} onClick={showmodal}/>  <br />
                                     <DefaultButtom typebuttom={2} text={"ELIMINAR"} onclick={onDeletebuttom} />
