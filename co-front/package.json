@@ -14,21 +14,12 @@
     "bootstrap": "^5.1.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "openid-connect": "^1.2.4",
     "react": "^17.0.2",
-=======
-=======
->>>>>>> feature/Emmanuel
     "node-sass": "^6.0.1",
     "openid-connect": "^1.2.4",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
-<<<<<<< HEAD
->>>>>>> 69d9e9d4fd820920818875c4e871c3c2e54e6076
-=======
->>>>>>> feature/Emmanuel
     "react-data-table-component": "^7.4.3",
     "react-data-table-component-extensions": "^1.5.2",
     "react-dom": "^17.0.2",

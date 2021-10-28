@@ -1,8 +1,7 @@
+import React, {useState, useEffect} from 'react';
 import { Card, CardHeader, CardBody, CardTitle, Row, Col} from "reactstrap";
 import DefaultTable from '../../components/defaultTable/defaultable';
 
-
-const Ventas = () => {
 
 const data = [
     {
@@ -38,6 +37,9 @@ const data = [
         "col" : "ACTIONS"
     }
 ];
+
+const Ventas = () => {
+
 
 const rows = [
     {id: 1, a:"123", b: "Paula Alejandra Saavedra", c: "2021/10/24", d: "2021/10/24", e: "Seller", f: "Autorizado"},

@@ -46,7 +46,7 @@ const GestionUsuarios = () => {
 
 
     async function registerData(data){
-        const response = await axios.post("http://localhost:3002/api/users/save-user",data);
+        const response = await axios.post("ttp://localhost:3002/api/users/save-user",data);
         if(response.status === 201) {
             listarData();
         }
