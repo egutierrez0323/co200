@@ -88,8 +88,7 @@ const rows = [
             </div>   
         </>
     )
-                                   
-                        }
+}
 
 export default Ventas
 
