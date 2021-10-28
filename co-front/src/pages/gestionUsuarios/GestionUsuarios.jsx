@@ -59,7 +59,7 @@ const GestionUsuarios = () => {
 
     async function listarData () {
         try{
-            const response = await axios.get("http://localhost:3002/api/users/get-users");
+            const response = await axios.get("http://localhost:3002/api/v1/user/list");
             if(response.status === 200 ){
                 const data = response.data;
                 setUsers(data)

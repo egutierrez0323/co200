@@ -21,7 +21,7 @@ const DefaultTable = ({data,dataMenus,option,onDeletebuttom}) => {
 
     async function deleteData(idUser){
         try{
-            const response = await axios.delete(`http://localhost:3002/api/users/delete-user/${data[idUser]._id}`)
+            const response = await axios.delete(`http://localhost:3001/api/users/delete-user/${data[idUser]._id}`)
             console.log(response)
         }catch(err){
             console.log(err)
@@ -47,7 +47,7 @@ const DefaultTable = ({data,dataMenus,option,onDeletebuttom}) => {
                     </thead>
                     <tbody>
                     {
-   
+                        
                         data.map( (datos,i) => (
                             <tr key={datos._id} >
                                 <td>{i+1}</td>
