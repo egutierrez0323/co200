@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Aside from "./components/aside/Aside.jsx";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";

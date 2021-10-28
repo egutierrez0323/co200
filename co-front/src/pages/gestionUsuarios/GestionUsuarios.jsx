@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table,Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import DefaultTable from '../../components/defaultTable/defaultable';
 
 
-function GestionUsuarios(){
+const GestionUsuarios = () => {
 
 const dataUsuarios = [
     {id: 1, nombre: "Paula Alejandra Saavedra", telefono: "3178486269", email: "paulaalejandra95@gmail.com", rol: "Ventas", estado: "Autorizado"},
@@ -79,40 +80,7 @@ const handleChange=e=>{
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardBody>
-                                            <Table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Nombre Completo</th>
-                                                    <th scope="col">Teléfono</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Rol</th>
-                                                    <th scope="col">Estado</th>
-                                                    <th scope="col">Acciones</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {data.map(elemento=>(
-                                                        <tr>
-                                                            <td>{elemento.id}</td>
-                                                            <td>{elemento.nombre}</td>
-                                                            <td>{elemento.telefono}</td>
-                                                            <td>{elemento.email}</td>
-                                                            <td>{elemento.rol}</td>
-                                                            <td>{elemento.estado}</td>
-                                                            <td>
-                                                                <a href="#" title="Editar">
-                                                                    <box-icon name='edit' color="green" onClick={()=>seleccionarUsuario(elemento, 'Editar')}></box-icon>
-                                                                </a>
-                                                                <a href="#" title="Eliminar">
-                                                                    <box-icon name='trash' color="red" onClick={()=>seleccionarUsuario(elemento, 'Eliminar')}></box-icon>  
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        ))
-                                                     }
-                                                </tbody>
-                                            </Table>
+                                                <DefaultTable/> {/* TABLA DE GESTION DE USUARIOS*/}
                                             </CardBody>
                                         </Card>
                                     </Col>
@@ -121,88 +89,6 @@ const handleChange=e=>{
                         </Card>
                     </Col>
                 </Row>
-                <Modal isOpen={modalEditar}>
-                    <ModalHeader>
-                    <div>
-                        <h3>Editar Usuario</h3>
-                    </div>
-                    </ModalHeader>
-                    <ModalBody>
-                    <div className="form-group">
-                        <label>ID</label>
-                        <input
-                        className="form-control"
-                        readOnly
-                        type="text"
-                        name="id"
-                        value={usuarioSeleccionado && usuarioSeleccionado.id}
-                        />
-                        <br />
-
-                        <label>Nombre</label>
-                        <input
-                        className="form-control"
-                        type="text"
-                        name="nombre"
-                        value={usuarioSeleccionado && usuarioSeleccionado.nombre}
-                        onChange={handleChange}
-                        />
-                        <br />
-
-                        <label>Teléfono</label>
-                        <input
-                        className="form-control"
-                        type="tel"
-                        name="telefono"
-                        value={usuarioSeleccionado && usuarioSeleccionado.telefono}
-                        onChange={handleChange}
-                        />
-                        <br />
-
-                        <label>Email</label>
-                        <input
-                        className="form-control"
-                        type="email"
-                        name="minutos"
-                        value={usuarioSeleccionado && usuarioSeleccionado.email}
-                        onChange={handleChange}
-                        />
-                        <br />
-
-                        <label>Rol</label>
-                        <input
-                        className="form-control"
-                        type="text"
-                        name="rol"
-                        value={usuarioSeleccionado && usuarioSeleccionado.rol}
-                        onChange={handleChange}
-                        />
-                        <br />
-
-                        <label>Estado</label>
-                        <input
-                        className="form-control"
-                        type="text"
-                        name="estado"
-                        value={usuarioSeleccionado && usuarioSeleccionado.estado}
-                        onChange={handleChange}
-                        />
-                        <br />
-                    </div>
-                    </ModalBody>
-                    <ModalFooter>
-                    <button className="btn btn-primary" onClick={()=>editar()}>
-                        Actualizar
-                    </button>
-                    <button
-                        className="btn btn-danger"
-                        onClick={()=>setModalEditar(false)}
-                    >
-                        Cancelar
-                    </button>
-                    </ModalFooter>
-                </Modal>
-
 
                 <Modal isOpen={modalEliminar}>
                     <ModalBody>
