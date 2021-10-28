@@ -73,7 +73,7 @@ const rows = [
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardBody>
-                                                <DefaultTable data={data} rows={rows}/> {/* TABLA DE GESTION DE USUARIOS*/}
+                                                {/* <DefaultTable data={data} rows={rows}/> TABLA DE GESTION DE USUARIOS */}
                                             </CardBody>
                                         </Card>
                                     </Col>

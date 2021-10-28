@@ -104,8 +104,43 @@ const DefaultTable = ({data,dataMenus,option,onDeletebuttom}) => {
                 <ModalupdateUser show={show} handleShow={handleShow} handleClose={handleClose} />
             </div>
         )
-    }
-
+    }else if (option === 2 ){ // retornar opciones de mapeo para la tabla de gestion de Productos
+    return (
+        <div className="DefaultTable">
+            <Table striped bordered hover>              
+                <thead>
+                    <tr>
+                        {
+                            dataMenus.map( (datos) => (
+                                <th key={datos.id}>
+                                    {datos.col}
+                                </th>
+                                )
+                            )
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                        data.map( (datos) => (
+                            <tr key={datos._id}>
+                                <td>{datos.id}</td>
+                                <td>{datos.descripcion}</td>
+                                <td>{datos.valoru}</td>
+                                <td>{datos.estado}</td>                  
+                                <td>
+                                    <DefaultButtom typebuttom={1} text={"ACTUALIZAR"} onClick={showmodal}/>  <br />
+                                    <DefaultButtom typebuttom={2} text={"ELIMINAR"} onclick={onDeletebuttom} />
+                                </td>
+                            </tr>
+                        ) )
+                    }
+                </tbody>
+            </Table>
+            <ModalupdateUser show={show} handleShow={handleShow} handleClose={handleClose} />
+        </div>
+    )
+}
 
 
 
