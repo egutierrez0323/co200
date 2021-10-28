@@ -17,7 +17,7 @@ function Login(){
               <header>Login Aqua200</header>
               
               <GoogleLogin
-                clientId="1092286687252-5a8tlnvafs15g2nicv9i641m2ajf9qtu.apps.googleusercontent.com"
+                clientId="429513669075-ht7ane4fnotjik9nsb4slp01h0qhegbv.apps.googleusercontent.com"
                 buttonText="Iniciar Sesión con Google"
                 onSuccess={respuestaGoogle}
                 onFailure={respuestaGoogle}
