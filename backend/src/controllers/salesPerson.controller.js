@@ -11,7 +11,7 @@ addSalesPerson = (req, res) => {
     const salesPerson_new = new salesPersonModel(req.body);
     salesPerson_new.save((error, sale) => {
         if (error) return res.status(500).json({ error: true, mensaje: error })
-        res.json({ mensaje: req.body._id + " agregado satisfactoriamente" })
+        res.json({ mensaje: " agregado satisfactoriamente" })
     })
 }
 

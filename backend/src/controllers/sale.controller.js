@@ -11,7 +11,7 @@ addSale = (req, res) => {
     const sale_new = new saleModel(req.body);
     sale_new.save((error, sale) => {
         if (error) return res.status(500).json({ error: true, mensaje: error })
-        res.json({ mensaje: req.body._id + " agregado satisfactoriamente" })
+        res.json({ mensaje: " agregado satisfactoriamente" })
     })
 }
 
@@ -19,7 +19,7 @@ deleteSale = async (req, res) => {
     const sale_delete = await saleModel.findByIdAndDelete({ _id: req.params.id })
 
     try {
-        if (sale_delete) return res.json({ mensaje: sale_delete.idVenta + " eliminado correctamente" });
+        if (sale_delete) return res.json({ mensaje: sale_delete._id + " eliminado correctamente" });
         else return res.status(500).json({ error: true, mensaje: "Falla al eliminar" });
     } catch (error) {
         return res.staus(500).json({ error: true, mensaje: error })
