@@ -7,6 +7,13 @@ getAllSalesPersons = (req, res) => {
     })
 }
 
+getOneSalesPerson = (req, res) => {
+    salesPersonModel.findOne({ _id: req.params.id }).exec((error, salesPersons) => {
+        if (error) return res.status(500).json({ error: true, mensaje: error });
+        res.json({ salesPersons });
+    })
+}
+
 addSalesPerson = (req, res) => {
     const salesPerson_new = new salesPersonModel(req.body);
     salesPerson_new.save((error, sale) => {
@@ -38,6 +45,7 @@ updateSalesPerson = async (req, res) => {
 
 module.exports = Object.freeze({
     getAllSalesPersons,
+    getOneSalesPerson,
     addSalesPerson,
     deleteSalesPerson,
     updateSalesPerson

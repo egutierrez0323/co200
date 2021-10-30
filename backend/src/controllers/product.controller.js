@@ -7,6 +7,13 @@ getAllProducts = (req, res) => {
     })
 }
 
+getOneProduct = (req, res) => {
+    productModel.findOne({ _id: req.params.id }).exec((error, products) => {
+        if (error) return res.status(500).json({ error: true, mensaje: error });
+        res.json({ products });
+    })
+}
+
 addProduct = (req, res) => {
     const product_new = new productModel(req.body);
     product_new.save((error, product) => {
@@ -38,6 +45,7 @@ updateProduct = async (req, res) => {
 
 module.exports = Object.freeze({
     getAllProducts,
+    getOneProduct,
     addProduct,
     deleteProduct,
     updateProduct
