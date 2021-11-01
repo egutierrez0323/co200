@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-node_modules
-=======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -125,9 +122,4 @@ dist
 .dynamodb/
 
 # TernJS port file
-<<<<<<< HEAD
 .tern-port
-=======
-.tern-port
->>>>>>> 36f6ec8714296ea83f555139441de2b63aec0095
->>>>>>> cba8d88f9bf61e5d3ca92a7f5bfb34645a79582f

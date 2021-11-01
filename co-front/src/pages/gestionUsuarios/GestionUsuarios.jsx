@@ -1,60 +1,92 @@
-import React, {useState} from 'react';
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table,Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import React, {useState, useEffect} from 'react';
+import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import axios from 'axios';
 import DefaultTable from '../../components/defaultTable/defaultable';
+import DefaultButtom from '../../components/defaultButton/defaultButtom';
+import ModalcreateUser from '../../components/modal/modalcreateuser'
+
+const dataMenus = [
+    {
+        "id"  : 1,
+        "col" : "ID"
+    },
+    {
+        "id" : 2,
+        "col" : "NOMBRE"
+    },
+    {
+        "id" : 3,
+        "col" : "TELEFONO"
+    },
+    {
+        "id" : 4,
+        "col": "EMAIL"
+    },
+    {
+        "id" : 5,
+        "col": "ROL"
+    },
+    {
+        "id" : 6,
+        "col": "ESTADO"
+    },
+    {
+        "id" : 7,
+        "col" : "ACTIONS"
+    }
+]
+
 
 
 const GestionUsuarios = () => {
 
-const dataUsuarios = [
-    {id: 1, nombre: "Paula Alejandra Saavedra", telefono: "3178486269", email: "paulaalejandra95@gmail.com", rol: "Ventas", estado: "Autorizado"},
-    {id: 2, nombre: "Mariana Gómez Betancur", telefono: "3218972347", email: "marisgob777@hotmail.com", rol: "Ventas", estado: "Autorizado"},
-    {id: 3, nombre: "Michael Mosquera", telefono: "3178670312", email: "mosqueraruiz@gmail.com", rol: "Administrador", estado: "Autorizado"},
-];
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-const [data, setData] = useState(dataUsuarios);
-const [modalEditar, setModalEditar] = useState(false);
-const [modalEliminar, setModalEliminar] = useState(false);
-const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
-    id: '',
-    nombre:'',
-    telefono:'',
-    email:'',
-    rol: '',
-    estado:'',
-});
 
-const seleccionarUsuario=(elemento,caso)=>{
-    setUsuarioSeleccionado(elemento);
-    (caso==='Editar')?setModalEditar(true):setModalEliminar(true)
-}
+    async function registerData(data){
+        const response = await axios.post("ttp://localhost:3002/api/users/save-user",data);
+        if(response.status === 201) {
+            listarData();
+        }
+    }
 
-const handleChange=e=>{
-    const {name, value}=e.target;
-    setUsuarioSeleccionado((prevState)=>({
-      ...prevState,
-      [name]: value
-    }));
-  }
+    async function getUser(user){
+        registerData(user);
+        handleClose();  
+    }
 
-  const editar=()=>{
-    var dataNueva=data;
-    dataNueva.map(usuario=>{
-      if(usuario.id===usuarioSeleccionado.id){
-        usuario.nombre=usuarioSeleccionado.nombre;
-        usuario.telefono=usuarioSeleccionado.telefono;
-        usuario.email=usuarioSeleccionado.email;
-        usuario.rol=usuarioSeleccionado.rol;
-        usuario.estado=usuarioSeleccionado.estado;
-      }
-    });
-    setData(dataNueva);
-    setModalEditar(false);
-  }
+    async function listarData () {
+        try{
+            const response = await axios.get("http://localhost:3002/api/v1/user/list");
+            if(response.status === 200 ){
+                const data = response.data;
+                setUsers(data)
+                console.log(data);
 
-  const eliminar =()=>{
-    setData(data.filter(usuario=>usuario.id!==usuarioSeleccionado.id));
-    setModalEliminar(false);
-  }
+            }
+        }catch (e) {
+            console.log(e)
+        }
+    }
+
+    async function deleteData(idUser){
+        try{
+            const response = await axios.delete(`http://localhost:3002/api/users/delete-user/${idUser}`)
+            listarData();
+            console.log(response)
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+    const [users, setUsers] = useState([]);
+
+    useEffect( () => {
+        listarData();
+    },[]);
+
 
     return (
         <>
@@ -65,7 +97,7 @@ const handleChange=e=>{
                             <CardHeader>
                                 <CardTitle tag="h5">Gestion de Usuarios</CardTitle>
                                 <p className="card-category">
-                                Listado de usuarios{" "}
+                                Listado de usuarios
                                 </p>
                             </CardHeader>
                             <CardBody>
@@ -75,12 +107,13 @@ const handleChange=e=>{
                                             <CardHeader>
                                                 <CardTitle >
                                                     <div>
-                                                        
+                                                        <DefaultButtom typebuttom={1}  text={"Registrar Usuario"}  onClick={handleShow}  />
+                                                        <ModalcreateUser  show={show} handleClose={handleClose} onSend={getUser}  />
                                                     </div>
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardBody>
-                                                <DefaultTable/> {/* TABLA DE GESTION DE USUARIOS*/}
+                                                <DefaultTable data={users} dataMenus={dataMenus} option={1} onDeletebuttom={deleteData}/> {/* TABLA DE GESTION DE USUARIOS*/}
                                             </CardBody>
                                         </Card>
                                     </Col>
@@ -89,31 +122,10 @@ const handleChange=e=>{
                         </Card>
                     </Col>
                 </Row>
-
-                <Modal isOpen={modalEliminar}>
-                    <ModalBody>
-                    ¿Estás Seguro que deseas eliminar el usuario? {usuarioSeleccionado && usuarioSeleccionado.nombre}
-                    </ModalBody>
-                    <ModalFooter>
-                    <button className="btn btn-danger" onClick={()=>eliminar()}>
-                        Sí
-                    </button>
-                    <button
-                        className="btn btn-secondary"
-                        onClick={()=>setModalEliminar(false)}
-                    >
-                        No
-                    </button>
-                    </ModalFooter>
-                </Modal>
-
-                
-
             </div>   
         </>
     )
-                                   
-                        }
+}
 
 export default GestionUsuarios
 

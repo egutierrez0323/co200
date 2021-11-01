@@ -1,31 +1,28 @@
-import '../Login/Login.css';
-import GoogleLogin from 'react-google-login';
+import "../Login/Login.css";
+import GoogleLogin from "react-google-login";
 
-
-
-function Login(){
-
-  const respuestaGoogle=(respuesta)=>{
+function Login() {
+  const respuestaGoogle = (respuesta) => {
     console.log(respuesta);
     console.log(respuesta.profileObj);
-  }
+  };
 
-    return (
-     <div>
-        <div class="bg-img">
-           <div class="contenido">
-              <header>Login Aqua200</header>
-              
-              <GoogleLogin
-                clientId="1092286687252-5a8tlnvafs15g2nicv9i641m2ajf9qtu.apps.googleusercontent.com"
-                buttonText="Iniciar Sesión con Google"
-                onSuccess={respuestaGoogle}
-                onFailure={respuestaGoogle}
-                cookiePolicy={'single_host_origin'}
-              />
+  return (
+    <div>
+      <div class="bg-img">
+        <div class="contenido">
+          <header>Login Aqua200</header>
+
+          <GoogleLogin
+            clientId="429513669075-ht7ane4fnotjik9nsb4slp01h0qhegbv.apps.googleusercontent.com"
+            buttonText="Iniciar Sesión con Google"
+            onSuccess={respuestaGoogle}
+            onFailure={respuestaGoogle}
+            cookiePolicy={"single_host_origin"}
+          />
         </div>
-        </div>
-     </div>
+      </div>
+    </div>
   );
 }
 export default Login;
