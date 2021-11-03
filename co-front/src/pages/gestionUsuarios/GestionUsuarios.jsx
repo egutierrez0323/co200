@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
 import axios from 'axios';
 import DefaultTable from '../../components/defaultTable/defaultable';
 import DefaultButtom from '../../components/defaultButton/defaultButtom';
-import ModalcreateUser from '../../components/modal/modalcreateuser'
+import ModalcreateUser from '../../components/modal/modalcreateuser';
 
 const dataMenus = [
     {
@@ -36,20 +36,16 @@ const dataMenus = [
     }
 ]
 
-
-
 const GestionUsuarios = () => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [users, setUsers] = useState([]);
 
-
-    async function registerData(data){
-        const response = await axios.post("ttp://localhost:3002/api/users/save-user",data);
-        if(response.status === 201) {
-            listarData();
-        }
+    const registerData = (data)=>{
+        console.log(data);
+        axios.post("http://localhost:3010/api/v1/user/add",data);
     }
 
     async function getUser(user){
@@ -59,13 +55,10 @@ const GestionUsuarios = () => {
 
     async function listarData () {
         try{
-            const response = await axios.get("http://localhost:3002/api/v1/user/list");
-            if(response.status === 200 ){
-                const data = response.data;
-                setUsers(data)
-                console.log(data);
-
-            }
+            axios.get("http://localhost:3010/api/v1/user/list").then((resp) => {
+               setUsers(resp.data.users);
+               console.log(resp.data.users);
+            })
         }catch (e) {
             console.log(e)
         }
@@ -73,7 +66,7 @@ const GestionUsuarios = () => {
 
     async function deleteData(idUser){
         try{
-            const response = await axios.delete(`http://localhost:3002/api/users/delete-user/${idUser}`)
+            const response = await axios.delete(`http://localhost:3010/api/v1/user/delete/${idUser}`)
             listarData();
             console.log(response)
         }catch(err){
@@ -81,9 +74,8 @@ const GestionUsuarios = () => {
         }
     }
 
-    const [users, setUsers] = useState([]);
-
     useEffect( () => {
+        console.log("a buscar la lista..");
         listarData();
     },[]);
 
@@ -113,7 +105,7 @@ const GestionUsuarios = () => {
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardBody>
-                                                <DefaultTable data={users} dataMenus={dataMenus} option={1} onDeletebuttom={deleteData}/> {/* TABLA DE GESTION DE USUARIOS*/}
+                                                <DefaultTable data={users} dataMenus={dataMenus} option={1} onDeletebuttom={deleteData}/>
                                             </CardBody>
                                         </Card>
                                     </Col>

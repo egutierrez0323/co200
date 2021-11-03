@@ -7,6 +7,13 @@ getAllUsers = (req, res) => {
     })
 }
 
+getOneUser = (req, res) => {
+    userModel.findOne({ _id: req.params.id }).exec((error, users) => {
+        if (error) return res.status(500).json({ error: true, mensaje: error });
+        res.json({ users });
+    })
+}
+
 addUser = (req, res) => {
     const user_new = new userModel(req.body);
     user_new.save((error, user) => {
@@ -38,6 +45,7 @@ updateUser = async (req, res) => {
 
 module.exports = Object.freeze({
     getAllUsers,
+    getOneUser,
     addUser,
     deleteUser,
     updateUser
