@@ -50,11 +50,13 @@ const GestionUsuarios = () => {
 
     async function getUser(user){
         registerData(user);
-        handleClose();  
+        handleClose();
+        listarData();
     }
 
     async function listarData () {
         try{
+            console.log("a buscar la lista..");
             axios.get("http://localhost:3010/api/v1/user/list").then((resp) => {
                setUsers(resp.data.users);
                console.log(resp.data.users);
@@ -65,17 +67,12 @@ const GestionUsuarios = () => {
     }
 
     async function deleteData(idUser){
-        try{
-            const response = await axios.delete(`http://localhost:3010/api/v1/user/delete/${idUser}`)
-            listarData();
-            console.log(response)
-        }catch(err){
-            console.log(err)
-        }
+        console.log('preparando el borrado...' + idUser);
+        axios.delete('http://localhost:3010/api/v1/user/delete/' + idUser);
+        listarData();
     }
 
     useEffect( () => {
-        console.log("a buscar la lista..");
         listarData();
     },[]);
 
