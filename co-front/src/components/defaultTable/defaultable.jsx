@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import DefaultButtom from '../defaultButton/defaultButtom';
 import ModalupdateUser from '../modal/modalupdateuser';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 const DefaultTable = ({ data, dataMenus, option, onDeletebuttom }) => {
@@ -16,13 +16,9 @@ const DefaultTable = ({ data, dataMenus, option, onDeletebuttom }) => {
         setShow(true)
     }
 
-    async function deleteData(idUser) {
-        try {
-            const response = await axios.delete(`http://localhost:3010/api/v1/user/delete/${data[idUser]._id}`)
-            console.log(response)
-        } catch (err) {
-            console.log(err)
-        }
+    const deleteUser = (idUser) => {
+        console.log("id para borrar" + idUser);
+        onDeletebuttom(idUser);
     }
 
 
@@ -45,7 +41,7 @@ const DefaultTable = ({ data, dataMenus, option, onDeletebuttom }) => {
                     <tbody>
                         {
                             data.map((datos, i) => (
-                                <tr key={datos._id} >
+                                <tr key={datos._id}>
                                     <td>{i + 1}</td>
                                     <td>{datos.nombre}</td>
                                     <td>{datos.telefono}</td>
@@ -54,7 +50,7 @@ const DefaultTable = ({ data, dataMenus, option, onDeletebuttom }) => {
                                     <td>{datos.estado}</td>
                                     <td>
                                         <DefaultButtom typebuttom={1} text={"ACTUALIZAR"} onClick={showmodal} />  <br />
-                                        <DefaultButtom typebuttom={2} text={"ELIMINAR"} onClick={() => deleteData(i)} />
+                                        <DefaultButtom typebuttom={2} text={"ELIMINAR"} onClick={() => deleteUser(datos._id)} />
                                     </td>
                                 </tr>
                             ))
